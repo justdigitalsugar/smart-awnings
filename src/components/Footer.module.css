@@ -26,12 +26,6 @@
   max-width: 300px;
 }
 
-.footerLinks {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-}
-
 .linkGroup h3 {
   font-size: 1.25rem;
   margin-bottom: 1.5rem;
@@ -61,19 +55,9 @@
   margin-bottom: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1023px) {
   .footerContainer {
     grid-template-columns: 1fr;
     gap: 2rem;
-  }
-  
-  .footerLinks {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (max-width: 480px) {
-  .footerLinks {
-    grid-template-columns: 1fr;
   }
 }
