@@ -5,7 +5,7 @@ import styles from './Footer.module.css';
 export default function Footer() {
   return (
     <footer className={styles.footer}>
-      <div className={`container ${styles.footerContainer}`}>
+      <div className={`mx-auto w-full max-w-7xl px-4 ${styles.footerContainer}`}>
         <div className={styles.footerBrand}>
           <div className={styles.logo}>
             <Image src="/images/smart_awnings_and_canopies_logo-1-1.png" alt="Smart Awnings & Canopies" width={200} height={75} style={{ objectFit: 'contain' }} className={styles.footerLogoImage} />
@@ -25,18 +25,20 @@ export default function Footer() {
             <Link href="/services.html">Services</Link>
             <Link href="#expertise">Expertise</Link>
             <Link href="#works">Works</Link>
+            <Link href="/projects">Projects</Link>
             <Link href="#faqs">FAQs</Link>
           </div>
           <div className={styles.linkGroup}>
             <h3>Contact</h3>
+            <Link href="/contact">Contact us</Link>
             <p>Tel: <a href="tel:07971917201">07971917201</a></p>
-            <Link href="#quote">Request a Quote</Link>
+            <Link href="/contact">Request a Quote</Link>
             <Link href="#survey">Book a Site Survey</Link>
           </div>
         </div>
       </div>
       <div className={styles.footerBottom}>
-        <div className="container">
+        <div className="mx-auto w-full max-w-7xl px-4">
           <p>&copy; {new Date().getFullYear()} Smart Awnings & Canopies. All rights reserved.</p>
         </div>
       </div>

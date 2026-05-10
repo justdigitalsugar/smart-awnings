@@ -3,6 +3,7 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import HeroSlider from "@/components/HeroSlider";
+import { featuredWorks } from "@/data/featuredWorks";
 
 export default function Home() {
   const products = [
@@ -33,24 +34,6 @@ export default function Home() {
       alt: "Glass rooms",
       title: "Glass rooms",
       description: "Create a bright, sheltered extension that keeps the outdoor feel while reducing wind and chill.",
-    },
-  ];
-
-  const featuredWorks = [
-    {
-      image: "/images/retractable-roof (1).jpg",
-      title: "Private terrace transformation",
-      detail: "Essex | Retractable roof with integrated lighting",
-    },
-    {
-      image: "/images/lourve-roof.JPG",
-      title: "Luxury hospitality pergola",
-      detail: "London | Bioclimatic louvre installation",
-    },
-    {
-      image: "/images/awning-home.jpg",
-      title: "Contemporary awning install",
-      detail: "Kent | Motorised awning with wind sensors",
     },
   ];
 
@@ -185,7 +168,7 @@ export default function Home() {
               <h2 className="mb-4">How it works</h2>
               <p>Every installation follows a clear route from concept to handover, so you always know what happens next.</p>
               <p className="mb-6">We keep updates transparent, timings realistic and finish quality exceptionally high.</p>
-              <Link href="#quote" className="btn w-full sm:w-auto text-center">Start Your Project</Link>
+              <Link href="/contact" className="btn w-full sm:w-auto text-center">Start Your Project</Link>
             </div>
 
             <div className="relative grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
@@ -338,20 +321,26 @@ export default function Home() {
                 <h2 className="mb-3">Signature installations with lasting impact</h2>
                 <p className="mb-0">A selection of recent projects across homes, hospitality and commercial spaces.</p>
               </div>
-              <Link href="#quote" className="btn w-full md:w-auto text-center">Discuss Your Project</Link>
+              <Link href="/contact" className="btn w-full md:w-auto text-center">Discuss Your Project</Link>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
-              {featuredWorks.map((work) => (
-                <article key={work.title} className="elevate-card group rounded-xl overflow-hidden border border-black/8 bg-white shadow-[0_20px_45px_rgba(30,15,30,0.1)]">
-                  <div className="relative h-[250px]">
-                    <Image src={work.image} alt={work.title} fill className="product-img" />
-                  </div>
-                  <div className="p-5">
-                    <h3 className="text-[1.35rem] mb-2">{work.title}</h3>
-                    <p className="mb-0 text-[0.92rem] text-text-secondary">{work.detail}</p>
-                  </div>
-                </article>
+              {featuredWorks.map((work, index) => (
+                <Link
+                  key={`${work.href}-${index}`}
+                  href={work.href}
+                  className="elevate-card group block rounded-xl overflow-hidden border border-black/8 bg-white shadow-[0_20px_45px_rgba(30,15,30,0.1)] transition-shadow duration-300 hover:shadow-[0_24px_50px_rgba(30,15,30,0.14)]"
+                >
+                  <article>
+                    <div className="relative h-[250px]">
+                      <Image src={work.image} alt={work.title} fill className="product-img transition-transform duration-500 group-hover:scale-[1.03]" />
+                    </div>
+                    <div className="p-5">
+                      <h3 className="text-[1.35rem] mb-2">{work.title}</h3>
+                      <p className="mb-0 text-[0.92rem] text-text-secondary">{work.detail}</p>
+                    </div>
+                  </article>
+                </Link>
               ))}
             </div>
           </div>

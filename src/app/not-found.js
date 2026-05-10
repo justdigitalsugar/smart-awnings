@@ -65,7 +65,7 @@ export default function NotFound() {
                 <Link href="/#faqs" className="rounded-lg border border-white/25 bg-white/10 px-4 py-3 text-white/90 hover:text-white">
                   Read FAQs
                 </Link>
-                <Link href="/#quote" className="rounded-lg border border-white/25 bg-white/10 px-4 py-3 text-white/90 hover:text-white">
+                <Link href="/contact" className="rounded-lg border border-white/25 bg-white/10 px-4 py-3 text-white/90 hover:text-white">
                   Request a quote
                 </Link>
                 <Link href="tel:07971917201" className="rounded-lg border border-white/25 bg-white/10 px-4 py-3 text-white/90 hover:text-white">

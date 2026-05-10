@@ -47,11 +47,10 @@ export default function Header() {
               <Link href="/products/glass-rooms" className="text-text-primary text-[0.9rem] font-normal whitespace-nowrap transition-colors duration-300 hover:text-accent">Glass Rooms</Link>
             </div>
           </div>
-          <Link href="#works" className="nav-link text-[0.84rem] tracking-[0.02em] font-light transition-colors duration-300 hover:text-accent text-text-secondary">Works</Link>
-          <Link href="#faqs" className="nav-link text-[0.84rem] tracking-[0.02em] font-light transition-colors duration-300 hover:text-accent text-text-secondary">FAQs</Link>
+          <Link href="/projects" className="nav-link text-[0.84rem] tracking-[0.02em] font-light transition-colors duration-300 hover:text-accent text-text-secondary">Projects</Link>
         </nav>
 
-        {/* Centre logo — actual pixel size changes so the header height changes too */}
+        {/* Centre logo: actual pixel size changes so the header height changes too */}
         <Link href="/" className="flex justify-center lg:justify-center items-center transition-all duration-300">
           <Image
             src="/images/smart_awnings_and_canopies_logo-1-1.png"
@@ -66,7 +65,7 @@ export default function Header() {
 
         {/* Right CTA */}
         <div className="hidden lg:flex items-center justify-end gap-6">
-          <Link href="#quote" className="btn px-6 py-3 text-xs font-medium tracking-wider">Request a Quote</Link>
+          <Link href="/contact" className="btn px-6 py-3 text-xs font-medium tracking-wider">Request a Quote</Link>
         </div>
 
         <Link
@@ -112,9 +111,8 @@ export default function Header() {
                 <Link href="/products/glass-rooms" className="text-[0.88rem] text-text-secondary" onClick={closeMobileMenu}>Glass Rooms</Link>
               </div>
             )}
-            <Link href="#works" className="text-text-secondary py-0.5 text-[0.95rem]" onClick={closeMobileMenu}>Works</Link>
-            <Link href="#faqs" className="text-text-secondary py-0.5 text-[0.95rem]" onClick={closeMobileMenu}>FAQs</Link>
-            <Link href="#quote" className="btn w-full text-center mt-1" onClick={closeMobileMenu}>Request a Quote</Link>
+            <Link href="/projects" className="text-text-secondary py-0.5 text-[0.95rem]" onClick={closeMobileMenu}>Projects</Link>
+            <Link href="/contact" className="btn w-full text-center mt-1" onClick={closeMobileMenu}>Request a Quote</Link>
             <Link href="#survey" className="btn w-full text-center" style={{ backgroundColor: '#ffffff', color: '#280028' }} onClick={closeMobileMenu}>Book a Site Survey</Link>
           </nav>
         </div>
